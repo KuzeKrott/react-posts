@@ -1,12 +1,14 @@
 import { Typography } from "@mui/material";
 import styles from "./page.module.scss";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-      <Typography variant="h2">
+    <main>
+      <Typography variant="h5">
         JOPAPISA
       </Typography>
-    </div>
+    </main>
   )
 }
+
+export default Home;
