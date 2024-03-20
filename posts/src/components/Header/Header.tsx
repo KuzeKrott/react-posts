@@ -1,6 +1,7 @@
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Styles from "./Header.module.scss";
 import HeaderLinks from "./HeaderLinks";
+import Logo from "./../../../public/next.svg";
 
 
 export type HeaderLink = {
@@ -9,10 +10,8 @@ export type HeaderLink = {
 }
 
 const links = [
-    {src : "/home", title : "HomePage"},
-    {src : "/about", title : "AboutPage"},
-    {src : "/home", title : "HomePage1"},
-    {src : "/about", title : "AboutPage1"},
+    {src : "/", title : "Welcome"},
+    {src : "/posts", title : "Posts"},
 ]
 
 const Header=() => {
@@ -23,7 +22,9 @@ const Header=() => {
             <Grid2 xs={8}>
                 <HeaderLinks links={links}></HeaderLinks>
             </Grid2>
-            <Grid2 xs={4}></Grid2>
+            <Grid2 xs={4} className={Styles.header__logo}>
+                <img {...Logo}></img>
+            </Grid2>
         </Grid2>
     )
 }

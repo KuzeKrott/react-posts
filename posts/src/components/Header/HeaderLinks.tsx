@@ -4,7 +4,9 @@ import { HeaderLink } from "./Header";
 import { IconButton, Typography } from "@mui/material";
 import styles from "./Header.module.scss";
 import DensityMediumRoundedIcon from '@mui/icons-material/DensityMediumRounded';
+import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import { useState } from "react";
+
 
 export type HeaderLinksProps = {
     links: HeaderLink[],
@@ -28,7 +30,7 @@ const HeaderLinks = (props: HeaderLinksProps) => {
     <div className={styles[`header__links-container`]}>
         <div className={styles[`header__links-container-btn`]}>
             <IconButton onClick={MenuButtonHandler}>
-                <DensityMediumRoundedIcon />
+                {menuIsOpen ? <ArrowBackIosNewRoundedIcon /> : <DensityMediumRoundedIcon />}
             </IconButton>
         </div>
 
