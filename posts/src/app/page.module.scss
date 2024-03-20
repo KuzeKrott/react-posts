@@ -1,0 +1,36 @@
+@import "./../styles/variables";
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+      font-size: calc(36px + 20 * (100vw - 320px) / 880);
+      text-align: center;
+      margin: 0 20px;
+    }
+    a {
+        color: $color-green;
+        text-decoration-line: none;
+        @media (hover: hover){
+            &:hover{
+                color: $color-yellow
+            }
+        }
+        @media (hover: none){
+            &:active{
+                color: $color-yellow
+            }
+        }
+    }
+}
